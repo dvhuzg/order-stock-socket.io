@@ -22,17 +22,8 @@ const CommandUI = (Command, a,index) => {
       <td>${Command.price}</td>
       <td>${Command.order_type}</td>
       <td>${a == undefined ? "Pending" : a}</td>
-      <td>
-      <button class="btn btn-danger delete" data-id="${Command._id}">Delete</button>
-      <button class="btn btn-secondary update" data-id="${Command._id}">View</button>
-      </td>
-
 `;
-const btnDelete = div.querySelector(".delete");
-const btnUpdate = div.querySelector(".update");
-console.log(btnUpdate);
-btnDelete.addEventListener("click", () => deleteCommand(btnDelete.dataset.id));
-btnUpdate.addEventListener("click", () => getCommandById(btnDelete.dataset.id));
+
   return div;
 };
 
